@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="UTF-8">
+    <title>thymeleaf</title>
+</head>
+<body>
+    <h2>[[${message}]]</h2>
+    <p th:text="${name}"></p>
+    <a th:href="@{/user/add}" shiro:hasPermission="user:add">用户添加</a>
+    <a th:href="@{/user/update}" shiro:hasPermission="user:update">用户更新</a>
+    <hr>
+    <a th:href="@{/permis/add}">测试用户添加权限注解</a><br>
+    <a th:href="@{/permis/update}">测试用户更新权限注解</a>
+</body>
+</html>

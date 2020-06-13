@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/shiro
+    password: root
+    username: root
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  type-aliases-package: com.lr.shirodemo.entity
+  mapper-locations: classpath*:mapper/*.xml
